@@ -44,3 +44,7 @@ export interface IActor {
   _links: ILinks;
 }
 
+export interface Searchperson {
+  score: number;
+  person: IActor;
+}
