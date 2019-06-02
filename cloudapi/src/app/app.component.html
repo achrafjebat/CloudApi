@@ -1,12 +1,102 @@
-<div class="p-grid">
-  <div class="p-col">Name</div>
-  <div class="p-col">{{naam}}</div>
-</div>
-<div class="p-grid">
-<div class="p-col">Birthday</div>
-<div class="p-col">{{birthday}}</div>
-</div>
-<div class="p-grid">
-<div class="p-col">Gender</div>
-<div class="p-col">{{gender}}</div>
+
+<style>
+        .grid-container {
+            display: grid;
+          grid-template-columns: auto auto auto;
+          background-color: rgb(87, 85, 85);
+          padding: 10px;
+          
+        }
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+        .grid-sub {
+            display: grid;
+          background-color: rgba(157, 157, 173, 0);
+          border: 5px solid rgba(0, 0, 0, 0.8);
+          grid-template-columns: auto auto auto;
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+         }
+         .grid-subitem{
+          background-color: rgba(236, 236, 241, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+        .gri
+        </style>
+
+
+<div class="grid-container">
+  <div class="grid-item">
+    <input type="text" [(ngModel)]="searchid" placeholder="search by id">
+    <button (click)="searchingid(searchid)" type="button"> search </button> 
+  </div>
+
+  <div class="grid-item">
+    <button (click)="showingall()" type="button"> show shows </button> 
+    <button (click)="minuspage()" type="button"> - </button> 
+    <label>{{this.page$}}</label>
+    <button (click)="pluspage()" type="button"> +  </button> 
+  </div>
+  <div class="grid-item">
+    <input type="text" [(ngModel)]="searchshow" placeholder="search show">
+    <button (click)="searchingshow(searchshow)" type="button"> Search </button> 
+  </div>
+  <div class="grid-item">
+        <div *ngIf= 'idshow$'>
+                <a href={{idshow$.url}}>
+               <h2>{{idshow$.name}}</h2>
+               <img *ngIf= 'idshow$.image != null' src="{{idshow$.image.medium}}" alt="">
+               </a>
+               <h5>{{idshow$.genres}}</h5>
+        </div>
+  </div>
+  <div class="grid-item">
+      
+        <div *ngIf= 'show$'>
+            <div class="grid-sub">
+                <div *ngFor= 'let show of show$' style="text-align:center">
+                    <div class="grid-subitem">
+                        <a href={{show.url}}><h4>{{show.name}}</h4></a>
+                        <h4 *ngIf= 'show.rating.average != null'>rating: {{show.rating.average}}</h4>
+                        <h4 *ngIf= 'show.rating.average == null'> rating : ??</h4>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+  </div>
+  <div class="grid-item">
+
+        <div *ngIf= 'shows$'>
+   
+                <div *ngFor= 'let shows of shows$' style="text-align:center">
+                    <a href={{shows.show.url}}>
+                    <h2>{{shows.show.name}}</h2>
+                  <img *ngIf= 'shows.show.image != null' src="{{shows.show.image.medium}}" alt=""></a>
+                </div>
+            </div>
+  </div>
+  <div class="grid-item">
+
+  </div>
+  <div class="grid-item">
+
+        <button (click)="minuspage()" type="button"> - </button> 
+        <label>{{this.page$}}</label>
+        <button (click)="pluspage()" type="button"> +  </button> 
+ 
+  </div>
+  <div class="grid-item">
+
+  </div>
 </div>
