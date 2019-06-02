@@ -1,0 +1,14 @@
+C:\school\cloudapi\CloudApi\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.deps.json
+C:\school\cloudapi\CloudApi\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.runtimeconfig.json
+C:\school\cloudapi\CloudApi\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.runtimeconfig.dev.json
+C:\school\cloudapi\CloudApi\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.dll
+C:\school\cloudapi\CloudApi\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.pdb
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.csprojAssemblyReference.cache
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.csproj.CoreCompileInputs.cache
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.RazorAssemblyInfo.cache
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.RazorAssemblyInfo.cs
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.AssemblyInfoInputs.cache
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.AssemblyInfo.cs
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.RazorTargetAssemblyInfo.cache
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.dll
+C:\school\cloudapi\CloudApi\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.pdb
