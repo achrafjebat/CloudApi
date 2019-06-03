@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 using MyAPI.models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+
+
 namespace MyAPI.Controllers
 {
     [Route("api/[controller]")]

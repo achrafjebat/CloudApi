@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MyAPI.models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ namespace MyAPI.Controllers
 {
     [Route("api/modellen")]
     [ApiController]
+  
     public class ModellenController : ControllerBase
     {
         public LibraryContext _context { get; set; }
@@ -24,7 +26,7 @@ namespace MyAPI.Controllers
         {
             return _context.model.ToList();
         }
-
+        
         [Route("{id}")]
         [HttpGet]
         public ActionResult<Model> GetModel(int id)
@@ -36,7 +38,7 @@ namespace MyAPI.Controllers
 
             return deModel;
         }
-
+         [Authorize]
         [Route("{id}")]
         [HttpDelete]
         public IActionResult DeleteModel(int id)

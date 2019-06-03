@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MyAPI.models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,14 @@ namespace MyAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.Authority = "https://accounts.google.com";  
+                    options.Audience = "---noteer hier je client id----";  
+                });
+
+
             services.AddDbContext<LibraryContext>(
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")
@@ -42,6 +51,8 @@ namespace MyAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAuthentication();
             app.UseMvc();
             DBInitializer.Initialize(context);
        
