@@ -1,0 +1,26 @@
+<input type="text" [(ngModel)]="searchid" placeholder="search by id">
+<button (click)="searchingid(searchid)" type="button"> search </button> 
+
+<div *ngIf= 'idmodel$'>
+ <h4>{{idmodel$.merkId}}</h4>
+ <h2>{{idmodel$.naam}}</h2>
+ <h4>{{idmodel$.naam}}</h4>
+ <h4>{{idmodel$.carroserievorm}}</h4>
+ <h4>{{idmodel$.motor}}</h4>
+ <h4>{{idmodel$.vermogen}}</h4>
+ <h4>{{idmodel$.brandstof}}</h4>
+</div>
+
+
+
+<div *ngIf= 'model$'>
+      <div *ngFor= 'let model of model$' style="text-align:center">
+             <h4>{{model.naam}}</h4>
+             <h4>{{model.carroserievorm}}</h4>
+             <h4>{{model.motor}}</h4>
+             <h4>{{model.vermogen}}</h4>
+             <h4>{{model.brandstof}}</h4>
+             <h4>{{model.merkId}}</h4>
+        </div>
+ 
+</div>
