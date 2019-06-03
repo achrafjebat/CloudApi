@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ApiService, Ishow, Ishows } from './extern/api.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,8 @@ import { ApiService, Ishow, Ishows } from './extern/api.service';
 })
 export class AppComponent {
 
-  constructor() {}
+    title ='user-service';
+  constructor(public user: UserService) {}
 
   ngOnInit() {
 
